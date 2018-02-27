@@ -59,6 +59,11 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_METHODS = default_methods
 CORS_ALLOW_HEADERS = default_headers
 
+SERVERS = {
+    'myapps': 8081,
+    'open_weather': 8082
+}
+
 ROOT_URLCONF = 'routing_server.urls'
 
 TEMPLATES = [
