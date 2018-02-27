@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from corsheaders.defaults import default_methods, default_headers
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,9 +26,6 @@ SECRET_KEY = 'viw@dtr!g@fttngd)&9nm5e&dmw4^i*y5g=u&-gcw+b((s#ose'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
+    'router'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,15 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+ALLOWED_HOSTS = [
+    "*"
+]
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000'
+)
+CORS_ALLOW_METHODS = default_methods
+CORS_ALLOW_HEADERS = default_headers
 
 ROOT_URLCONF = 'routing_server.urls'
 
