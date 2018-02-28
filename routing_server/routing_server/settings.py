@@ -54,7 +54,9 @@ ALLOWED_HOSTS = [
     "*"
 ]
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000'
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://myapps.gallery/'
 )
 CORS_ALLOW_METHODS = default_methods
 CORS_ALLOW_HEADERS = default_headers
