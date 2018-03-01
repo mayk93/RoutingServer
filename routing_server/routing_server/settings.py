@@ -61,6 +61,7 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_METHODS = default_methods
 CORS_ALLOW_HEADERS = default_headers
 
+# ToDo: Make this loadable from somewhere
 SERVERS = {
     'myapps': 8081,
     'open_weather': 8082
