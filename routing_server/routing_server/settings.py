@@ -63,7 +63,7 @@ CORS_ALLOW_HEADERS = default_headers
 
 # ToDo: Make this loadable from somewhere
 SERVERS = {
-    'myapps': 8081,
+    'my_apps': 8081,
     'open_weather': 8082
 }
 
